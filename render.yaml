@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: servcraft-fault-fix
+    name: servcraft-donovan-fault-fix
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app

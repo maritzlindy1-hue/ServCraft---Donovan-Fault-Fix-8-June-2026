@@ -1,12 +1,10 @@
-from flask import Flask
+from flask import Flask, send_file
 
 app = Flask(__name__)
 
-HTML = open("dashboard.html", "r", encoding="utf-8").read()
-
 @app.route("/")
 def dashboard():
-    return HTML
+    return send_file("dashboard.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
