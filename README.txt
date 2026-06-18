@@ -1,12 +1,8 @@
-Correct Render upload files.
+GitHub / Render update files for Donovan Ticket Dashboard.
 
-Upload all files in this folder to GitHub:
-- app.py
-- dashboard.html
-- requirements.txt
-- render.yaml
+Upload all files to GitHub and redeploy on Render.
 
-Render settings:
-Environment: Python 3
+Render:
 Build Command: pip install -r requirements.txt
 Start Command: gunicorn app:app
+Environment: Python
