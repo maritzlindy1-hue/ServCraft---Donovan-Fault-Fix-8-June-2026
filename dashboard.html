@@ -1,1 +1,210 @@
-<html><body><h1>Donovan Ticket Dashboard</h1><h2>Current Active Tickets: 44</h2></body></html>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donovan Ticket Dashboard</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f3f6fa;margin:0;padding:24px;color:#111}
+h1{color:#083b70;margin:0 0 14px;font-size:28px}
+h2{margin:22px 0 10px;font-size:22px;color:#111}
+.small{color:#555;margin-bottom:12px}
+.tabs{display:flex;gap:10px;margin-bottom:18px}
+.tabbtn{background:#063d72;color:#fff;border:0;border-radius:6px;padding:9px 14px;font-weight:700;cursor:pointer}
+.tab{display:none}
+.tab.active{display:block}
+.cards{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:18px}
+.card{background:white;border-radius:10px;box-shadow:0 3px 12px #d7dde5;padding:18px 22px;min-width:205px}
+.card .label{font-weight:700;font-size:15px}
+.card .num{font-size:30px;font-weight:800;margin-top:12px;color:#083b70}
+.green{color:#0b8a3a!important;font-weight:800}
+.red{color:#b00020!important;font-weight:800}
+.blue{color:#083b70!important;font-weight:800}
+table{border-collapse:collapse;background:white;width:100%;margin-top:10px;font-size:14px}
+th{background:#063d72;color:white;text-align:left;padding:9px}
+td{border:1px solid #dcdfe5;padding:8px;vertical-align:top}
+tr:nth-child(even) td{background:#fbfbfb}
+.note{background:#fff;border-left:5px solid #063d72;padding:12px;margin:12px 0;box-shadow:0 2px 8px #d7dde5}
+@media(max-width:760px){body{padding:14px}.card{min-width:150px}table{font-size:12px}}
+</style>
+<script>
+function showTab(id){
+ document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+</script>
+</head>
+<body>
+<h1>Donovan Ticket Dashboard</h1>
+<div class="small">Updated from Job Card List 202606231123.xlsx</div>
+
+<div class="tabs">
+<button class="tabbtn" onclick="showTab('current')">Current Dashboard</button>
+<button class="tabbtn" onclick="showTab('trend')">Ticket Trend</button>
+</div>
+
+<div id="current" class="tab active">
+<div class="cards">
+<div class="card"><div class="label">Current Active Tickets</div><div class="num">44</div></div>
+<div class="card"><div class="label">Tickets Stuck &gt;3 Days</div><div class="num red">22</div></div>
+<div class="card"><div class="label">Average Days In Status</div><div class="num">4.2</div></div>
+</div>
+
+<h2>Current Summary</h2>
+<table><thead><tr><th>Status</th><th style="width:120px">Count</th></tr></thead><tbody><tr><td>FF17_FT_JC Stalled (Check Comments)</td><td>12</td></tr>
+<tr><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>7</td></tr>
+<tr><td>FF05_FT_Quote Amend/Send</td><td>6</td></tr>
+<tr><td>FF02.3_PT_1st email sent to Client</td><td>6</td></tr>
+<tr><td>FF03.1_PT_1st Call made to Client</td><td>3</td></tr>
+<tr><td>SI07_FT_Quote Sent Awaiting Customer Approval</td><td>2</td></tr>
+<tr><td>FF12.1_PT_Install complete capture info</td><td>1</td></tr>
+<tr><td>IN20_FT_JC Stalled (Check Comments)</td><td>1</td></tr>
+<tr><td>FF04.1_FT_Quote population</td><td>1</td></tr>
+<tr><td>FF16_CLOSE Job</td><td>1</td></tr>
+<tr><td>FF09.2_LT_Job Approved Send Stock</td><td>1</td></tr>
+<tr><td>FF06_PT_Quote Sent Awaiting Customer Approval</td><td>1</td></tr>
+<tr><td>FF04.2_FT_Quote to Approve Internal</td><td>1</td></tr>
+<tr><td>FF12.2_QT_Install Sign Off</td><td>1</td></tr></tbody></table>
+
+<h2>Ticket Details</h2>
+<table><thead><tr><th>Job Number</th><th>Job Status</th><th>Days In Status</th><th>Assigned To</th><th>Customer</th><th>Location</th><th>Description</th></tr></thead><tbody><tr><td>JC10848</td><td>FF12.1_PT_Install complete capture info</td><td>12</td><td>Donovan Willemse, Justin Bezuidenhout</td><td>Seven Seasons 214 (Pty) Ltd</td><td>Site Manager Unknown</td><td>Meter has not connected in a few days. Need to resolve comms issues</td></tr>
+<tr><td>JC10852</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>0</td><td>Donovan Willemse</td><td>Inospace 2 (Pty) Ltd - Silo Exchange</td><td>Silo Exchange Brug St, Triangle Farm, Cape Town, 7530</td><td>The meter connected to the modem ( MSS6384)  is not calling in</td></tr>
+<tr><td>JC10855</td><td>SI07_FT_Quote Sent Awaiting Customer Approval</td><td>21</td><td>Donovan Willemse, Kyle de Agrella, Zoë Wille</td><td>Inospace 3 Proprietary Limited [Eastleigh Exchange]</td><td>Eastleigh Exchange 37 Main Road, Eastleigh, Edenvale, 1609 (Leander)</td><td>Leander would like to get James to install 2x 3P meters for units 13 &amp; 6C at Eastleigh exchange. Can you please create a JC for this? He has not been able to get me the breaker sizes for this yet. I was hoping he would get it to me before James goes to do the CT correction next week. They need to be quoted for the 2x meters plus labour. Unit 13 is being split and the old unit 13 meter should be labelled unit 9.</td></tr>
+<tr><td>JC10858</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>5</td><td>Donovan Willemse, Sean Knoetze</td><td>Bellingan Properties (Pty) Ltd</td><td>274 Kaleidoscope (Vodacom Acres) 274 Cape Road Newton Park Gqeberha</td><td>THE ABSA METER HAS NOT COMMUNICATED WITH US FOR A FEW DAYS.</td></tr>
+<tr><td>JC10894</td><td>IN20_FT_JC Stalled (Check Comments)</td><td>4</td><td>Donovan Willemse, Kyle de Agrella</td><td>Windsor Family Trust</td><td>80 Burman Road</td><td>Meter commissioning at 80 Burman Rd.
+Meter was programmed in house. Mike did the install. 
+
+CT ratio 300/5
+Tenant: ACM</td></tr>
+<tr><td>JC10906</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>5</td><td>Donovan Willemse</td><td>Deal Commerce Property Fund No 18 (Pty) Ltd</td><td>Hewetts Business Park 19 Hewett Avenue Epping Industria Cape Town</td><td>The meter has not connected since the 23rd. Please solve comms.  Modem (MSK57605)</td></tr>
+<tr><td>JC10911</td><td>FF05_FT_Quote Amend/Send</td><td>14</td><td>Donovan Willemse, Zoë Wille</td><td>BKB</td><td>BKB BKB Building 61 Grahamstown Rd North End (Deon)</td><td>C-BJA1057 not calling in, billing due the 2nd.</td></tr>
+<tr><td>JC10914</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>3</td><td>Donovan Willemse</td><td>Inofort Proprietary Limited [Coventry Works]</td><td>Coventry Works 675 Old Pretoria Rd, Halfway House, Midrand</td><td>TR noted that the PV meter is calling in, but no consumption is recorded. No one else mentioned knowing any reason as to why, so creating a fault fix so we can investigate.</td></tr>
+<tr><td>JC10916</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>12</td><td>Donovan Willemse, Shane Bowers</td><td>The Equity Property Partnership</td><td>Site Manager 53 Main Rd Claremont Cape Town</td><td>Meter has stopped communicating with us, we need to resolve comms.</td></tr>
+<tr><td>JC10917</td><td>FF05_FT_Quote Amend/Send</td><td>7</td><td>Donovan Willemse, Justin Bezuidenhout, Kyle de Agrella, Zoë Wille</td><td>Trillium Trading 4 (Pty) Ltd</td><td>Site manager N2 Hillcrest Shopping Centre, 16 Durban Rd Umtata Central Mthatha</td><td>KdA has asked we create a JC. The phasor graph indicates there is a fault with the meter. We need to investigate</td></tr>
+<tr><td>JC10918</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>0</td><td>Donovan Willemse</td><td>Lumibiz (PTY) Ltd</td><td>Lords View 9 Jacaranda St Chloorkop Midrand</td><td>Meter is stuggling with comms, please resolve. Meter is down on the gateway</td></tr>
+<tr><td>JC10938</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>4</td><td>Donovan Willemse</td><td>Henens Meat Market EP (Pty) Ltd - Monitoring</td><td>Govan Mbeki Avenue North End</td><td>Meter has not connected to Scada, please resolve comms</td></tr>
+<tr><td>JC10952</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>5</td><td>Donovan Willemse, Justin Bezuidenhout</td><td>Makana Fast Food</td><td>Site Manager Steers High Street Grahamstown</td><td>Meter has stopped communicating with us, please resolve comms. Error states modem is off.</td></tr>
+<tr><td>JC10954</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>5</td><td>Donovan Willemse, Lindy Maritz</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>28500183 is not calling in. Billing due on the 5th.</td></tr>
+<tr><td>JC10955</td><td>FF04.1_FT_Quote population</td><td>4</td><td>Donovan Willemse, Zoë Wille</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>C-SAG8535 water meter not calling in, visio 02032FB0.</td></tr>
+<tr><td>JC10958</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>5</td><td>Donovan Willemse</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>28500299 not calling in, billing due the 5th.</td></tr>
+<tr><td>JC10959</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td><td>Donovan Willemse, Zoë Wille</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>C-SAE5182 not calling in visio 0203443E</td></tr>
+<tr><td>JC10960</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td><td>Donovan Willemse, Zoë Wille</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>C-SAE5181 not calling in, visio 02033D62. billing due the 5th</td></tr>
+<tr><td>JC10961</td><td>FF16_CLOSE Job</td><td>15</td><td>Donovan Willemse</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>28500291 not calling in. Billing due the 5th. This unit is vacant so could be off due to that?</td></tr>
+<tr><td>JC10963</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td><td>Donovan Willemse, Zoë Wille</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>C-SAE5176 not calling in, 028EB1DD visio. Billing due 5th</td></tr>
+<tr><td>JC10964</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td><td>Donovan Willemse, Zoë Wille</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>028EB998, M3-C-HAA4618 not calling in. Billing due the 5th</td></tr>
+<tr><td>JC10965</td><td>FF05_FT_Quote Amend/Send</td><td>13</td><td>Donovan Willemse, Zoë Wille</td><td>Naledi Mall (Pty) Ltd</td><td>Dolphins Leap 35 Humewood Rd Humewood Gqeberha (Alexander van Zyl)</td><td>220902279 not calling in, visio 00C57D16. Billing due 5th</td></tr>
+<tr><td>JC10966</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td><td>Donovan Willemse, Joanne Kumm, Zoë Wille</td><td>Donvin Properties (Pty) Ltd</td><td>Fish Hoek 1st Floor Town Square Main Rd Fish Hoek</td><td>Meter is still connected to a visio. Previous JC was closed, and this is the last month  we can estimate. Please quote to replace the meter</td></tr>
+<tr><td>JC10971</td><td>FF02.3_PT_1st email sent to Client</td><td>4</td><td>Donovan Willemse</td><td>St Helena Health (Pty) Ltd</td><td>Site Manager 8 St Helena Road Beacon Bay North East London</td><td>Main bulk meter is not calling in. It is used to fill tanks, but it is also a KMP so should at least call in. Please check comms</td></tr>
+<tr><td>JC10973</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td><td>Donovan Willemse</td><td>Limosa Limosa Investment 13 (Pty) Ltd - Amalinda</td><td>Amalinda Centre Amalinda</td><td>The meter measuring the guard house is down. It is a AS220, and there are other meters connected to the modem calling in. ( MSS62947)</td></tr>
+<tr><td>JC10974</td><td>FF05_FT_Quote Amend/Send</td><td>12</td><td>Donovan Willemse, Zoë Wille</td><td>West Street Management (Pty) Ltd</td><td>Webbing Products 54 Paterson Road North End Gqebhera</td><td>Meter is still connected to visio ( 0200004E )  has stopped calling in, we need to quote on replacing</td></tr>
+<tr><td>JC10978</td><td>FF03.1_PT_1st Call made to Client</td><td>1</td><td>Donovan Willemse</td><td>Sillhouette Estates (Pty) Ltd</td><td>Duane van Wijk</td><td>The gateway at the SBV building is down. All three meters connected have not called in for 3 days</td></tr>
+<tr><td>JC10986</td><td>FF02.3_PT_1st email sent to Client</td><td>0</td><td>Donovan Willemse</td><td>Bungalow Mall (Pty) Ltd</td><td>Bungalow Mall Merriman Street Gcuwa Butterworth</td><td>54043796 - Toilet meter not calling in!</td></tr>
+<tr><td>JC10987</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>5</td><td>Donovan Willemse, Justin Bezuidenhout</td><td>Burlington Farming</td><td>Site Manager Cookhouse</td><td>Meters reading the transformers are down.</td></tr>
+<tr><td>JC10988</td><td>FF02.3_PT_1st email sent to Client</td><td>0</td><td>Donovan Willemse</td><td>Adcock Ingram Healthcare (Pty) Ltd</td><td>Clayville Industrial Cnr Axle &amp; Baksteen Roads Clayville Olifantsfontein (Keyshen Moodley)</td><td>Modem ( MSS36223 )</td></tr>
+<tr><td>JC10989</td><td>FF09.2_LT_Job Approved Send Stock</td><td>1</td><td>Donovan Willemse, Lizette Benn</td><td>Trueprop Facilities (Pty) Ltd</td><td>32 Dyer St Arcadia East London 5201</td><td>See email attached from Ryan apparently there were two units that was off one feed. The feed was split and this meter had comms. However on closer inspection the meter had no consumption. Typical lora device issue. We will need to quote on replacing with a smart water meter.</td></tr>
+<tr><td>JC10990</td><td>SI07_FT_Quote Sent Awaiting Customer Approval</td><td>0</td><td>Donovan Willemse, Tanya Redelinghuys, Zoë Wille</td><td>Inospace 2 (Pty) Ltd - Silo Exchange</td><td>Silo Exchange Brug St, Triangle Farm, Cape Town, 7530</td><td>Tanya/Donny. Please can we quote Inospace for replacement of this meter. The meter is old (Installed 2020) and giving issues with a risk that the meter will not switch back on again after being switched off. And please let Ane know about this, apparently she will understand what the problem is.</td></tr>
+<tr><td>JC10992</td><td>FF03.1_PT_1st Call made to Client</td><td>6</td><td>Donovan Willemse</td><td>Icala Properties (Pty) Ltd</td><td>Site Manager 26 Henry Ford Rd Neave Industrial Gqeberha</td><td>Meter has not communicated with us for a few days. Please can we resolve comms. ( MSS31625)</td></tr>
+<tr><td>JC10994</td><td>FF05_FT_Quote Amend/Send</td><td>0</td><td>Donovan Willemse, Justin Bezuidenhout, Zoë Wille</td><td>Clemlen Investments No6 (Pty) Ltd</td><td>Shopping Centre 50 Campbell St KwaMaqoma 5720</td><td>Meter connected to modem ( MSC34870) has not connected to us. Please can we resolve comms</td></tr>
+<tr><td>JC10997</td><td>FF03.1_PT_1st Call made to Client</td><td>0</td><td>Donovan Willemse</td><td>Damaska Trading 7 (Pty) Ltd</td><td>Unknown 147 Richardson Road</td><td>Meter has lost comms. I checked the modem it seems to be offline (MSS37958)</td></tr>
+<tr><td>JC11001</td><td>FF02.3_PT_1st email sent to Client</td><td>2</td><td>Donovan Willemse</td><td>Beer Properties (Pty) Ltd</td><td>213/214 Idutywa Site Manager</td><td>Store meter connected to modem ( MSS38118 ) has not called in for a while. We need to resolve comms.</td></tr>
+<tr><td>JC11006</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td><td>Donovan Willemse</td><td>Grove Industrial Properties (Pty) Ltd</td><td>161 Jan Smuts Ave Greenfields East London 5201</td><td>Meter connected to modem ( MSK97056) has not connected to us in a while. Please resolve comms</td></tr>
+<tr><td>JC11007</td><td>FF06_PT_Quote Sent Awaiting Customer Approval</td><td>1</td><td>Bevan De Jager, Donovan Willemse, Lindy Maritz, Zoë Wille</td><td>Derprops 113 (Pty) Ltd</td><td>Derprops Industrial Park 23 Wimbledon Road Blackhealth Cape Town</td><td>During validations BJ picked up that the phases was reading in reverse. The customer had their own solar installers a while back and it affected our meters- could possibly be that they have swapped our CT&#x27;s. We will need Shane to investigate please and rectify.</td></tr>
+<tr><td>JC11008</td><td>FF04.2_FT_Quote to Approve Internal</td><td>0</td><td>Donovan Willemse, Ingrid Brown, Zoë Wille</td><td>Trueprop Facilities (Pty) Ltd</td><td>32 Dyer St Arcadia East London 5201</td><td>Meter is still connected to a visio ( 01FFEA4A ) we need to quote on replacing the meter.</td></tr>
+<tr><td>JC11009</td><td>FF05_FT_Quote Amend/Send</td><td>0</td><td>Donovan Willemse, Zoë Wille</td><td>Naledi Mall (Pty) Ltd</td><td>Dolphins Leap 35 Humewood Rd Humewood Gqeberha (Alexander van Zyl)</td><td>Meter is still connected to the visio ( 00C57FF8 ) has lost comms. Can we please quote TP on a replacement smart meter.</td></tr>
+<tr><td>JC11011</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>0</td><td>Donovan Willemse</td><td>Choice Decisions 80 CC / Western Gruppe Properties (Pty) Ltd Monitoring</td><td>Southernwood Centre Errol Spring Ave, Southernwood, Mthatha, 5100</td><td>12992774 is offline again, billing due on the 14th. This is an ongoing issue and the site is far away. We need to attempt to hardwire the gateways in so they cannot be turned off by tenants.</td></tr>
+<tr><td>JC11012</td><td>FF02.3_PT_1st email sent to Client</td><td>4</td><td>Donovan Willemse</td><td>Inofort (Pty) Ltd [Maitland Business Exchange]</td><td>Maitland Business Exchange, Maitland 8th and 9th Avenue, Maitland, Cape Town, 7404 (Liam Vickers)</td><td>Multiple meters connected to modem ( MSK62756 ) has not connected to us. Please resolve comms.</td></tr>
+<tr><td>JC11014</td><td>FF12.2_QT_Install Sign Off</td><td>0</td><td>Donovan Willemse, Tanya Redelinghuys</td><td>InoFort Proprietary Limited [Electron Exchange]</td><td>Electron Exchange, 50 Electron Avenue, Isando, Johannesburg, 1600 (Sharon)</td><td>Modem comms issue. Client could not be turned on remotely. MOB to assist with reboot.</td></tr>
+<tr><td>JC11016</td><td>FF02.3_PT_1st email sent to Client</td><td>0</td><td>Donovan Willemse</td><td>Inofort Proprietary Limited [Coventry Works]</td><td>Coventry Works 675 Old Pretoria Rd, Halfway House, Midrand</td><td>Meter has not called in for. while. We need to please resolve comms</td></tr>
+</tbody></table>
+</div>
+
+<div id="trend" class="tab">
+<h2>Ticket Movement Overview</h2>
+<div class="cards">
+<div class="card"><div class="label">Starting Ticket Count</div><div class="num">11</div></div>
+<div class="card"><div class="label">Current Ticket Count</div><div class="num">44</div></div>
+<div class="card"><div class="label">Original Tickets Closed</div><div class="num green">7</div></div>
+<div class="card"><div class="label">New Tickets Added</div><div class="num red">40</div></div>
+</div>
+
+<h2>Explanation</h2>
+<table>
+<thead><tr><th>Metric</th><th>Explanation</th></tr></thead>
+<tbody>
+<tr><td>Starting Count</td><td>Initial Donovan dashboard contained 11 active tickets.</td></tr>
+<tr><td>Current Count</td><td>Latest active Donovan ticket count from Job Card List 202606231123.xlsx.</td></tr>
+<tr><td>Closed Tickets</td><td>7 of the original 11 job cards no longer appear as active in the latest export.</td></tr>
+<tr><td>New Tickets Added</td><td>40 new active tickets were added after the first dashboard snapshot.</td></tr>
+</tbody>
+</table>
+
+<h2>Trend Summary</h2>
+<table>
+<thead><tr><th>Category</th><th>Count</th></tr></thead>
+<tbody>
+<tr><td>Total Tickets Handled During Period</td><td>51</td></tr>
+<tr><td>Still Active From Original Batch</td><td>4</td></tr>
+<tr><td>Original Tickets Closed</td><td>7</td></tr>
+<tr><td>New Tickets Added</td><td>40</td></tr>
+<tr><td>Current Active Total</td><td>44</td></tr>
+</tbody>
+</table>
+
+<h2>Original Ticket Movement</h2>
+<table><thead><tr><th>Original Job Number</th><th>Current Position</th></tr></thead><tbody><tr><td>JC10846</td><td class="green">Closed / No longer active</td></tr>
+<tr><td>JC10847</td><td class="green">Closed / No longer active</td></tr>
+<tr><td>JC10848</td><td class="blue">Still Active</td></tr>
+<tr><td>JC10852</td><td class="blue">Still Active</td></tr>
+<tr><td>JC10853</td><td class="green">Closed / No longer active</td></tr>
+<tr><td>JC10855</td><td class="blue">Still Active</td></tr>
+<tr><td>JC10858</td><td class="blue">Still Active</td></tr>
+<tr><td>JC10859</td><td class="green">Closed / No longer active</td></tr>
+<tr><td>JC10860</td><td class="green">Closed / No longer active</td></tr>
+<tr><td>JC10861</td><td class="green">Closed / No longer active</td></tr>
+<tr><td>JC10862</td><td class="green">Closed / No longer active</td></tr></tbody></table>
+
+<h2>New Tickets Added</h2>
+<table><thead><tr><th>Job Number</th><th>Status</th><th>Days In Status</th></tr></thead><tbody><tr><td>JC10894</td><td>IN20_FT_JC Stalled (Check Comments)</td><td>4</td></tr>
+<tr><td>JC10906</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>5</td></tr>
+<tr><td>JC10911</td><td>FF05_FT_Quote Amend/Send</td><td>14</td></tr>
+<tr><td>JC10914</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>3</td></tr>
+<tr><td>JC10916</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>12</td></tr>
+<tr><td>JC10917</td><td>FF05_FT_Quote Amend/Send</td><td>7</td></tr>
+<tr><td>JC10918</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>0</td></tr>
+<tr><td>JC10938</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>4</td></tr>
+<tr><td>JC10952</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>5</td></tr>
+<tr><td>JC10954</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>5</td></tr>
+<tr><td>JC10955</td><td>FF04.1_FT_Quote population</td><td>4</td></tr>
+<tr><td>JC10958</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>5</td></tr>
+<tr><td>JC10959</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td></tr>
+<tr><td>JC10960</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td></tr>
+<tr><td>JC10961</td><td>FF16_CLOSE Job</td><td>15</td></tr>
+<tr><td>JC10963</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td></tr>
+<tr><td>JC10964</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td></tr>
+<tr><td>JC10965</td><td>FF05_FT_Quote Amend/Send</td><td>13</td></tr>
+<tr><td>JC10966</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>1</td></tr>
+<tr><td>JC10971</td><td>FF02.3_PT_1st email sent to Client</td><td>4</td></tr>
+<tr><td>JC10973</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td></tr>
+<tr><td>JC10974</td><td>FF05_FT_Quote Amend/Send</td><td>12</td></tr>
+<tr><td>JC10978</td><td>FF03.1_PT_1st Call made to Client</td><td>1</td></tr>
+<tr><td>JC10986</td><td>FF02.3_PT_1st email sent to Client</td><td>0</td></tr>
+<tr><td>JC10987</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>5</td></tr>
+<tr><td>JC10988</td><td>FF02.3_PT_1st email sent to Client</td><td>0</td></tr>
+<tr><td>JC10989</td><td>FF09.2_LT_Job Approved Send Stock</td><td>1</td></tr>
+<tr><td>JC10990</td><td>SI07_FT_Quote Sent Awaiting Customer Approval</td><td>0</td></tr>
+<tr><td>JC10992</td><td>FF03.1_PT_1st Call made to Client</td><td>6</td></tr>
+<tr><td>JC10994</td><td>FF05_FT_Quote Amend/Send</td><td>0</td></tr>
+<tr><td>JC10997</td><td>FF03.1_PT_1st Call made to Client</td><td>0</td></tr>
+<tr><td>JC11001</td><td>FF02.3_PT_1st email sent to Client</td><td>2</td></tr>
+<tr><td>JC11006</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td></tr>
+<tr><td>JC11007</td><td>FF06_PT_Quote Sent Awaiting Customer Approval</td><td>1</td></tr>
+<tr><td>JC11008</td><td>FF04.2_FT_Quote to Approve Internal</td><td>0</td></tr>
+<tr><td>JC11009</td><td>FF05_FT_Quote Amend/Send</td><td>0</td></tr>
+<tr><td>JC11011</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>0</td></tr>
+<tr><td>JC11012</td><td>FF02.3_PT_1st email sent to Client</td><td>4</td></tr>
+<tr><td>JC11014</td><td>FF12.2_QT_Install Sign Off</td><td>0</td></tr>
+<tr><td>JC11016</td><td>FF02.3_PT_1st email sent to Client</td><td>0</td></tr>
+</tbody></table>
+</div>
+</body>
+</html>
