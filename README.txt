@@ -1,12 +1,9 @@
 GitHub files for Donovan Ticket Dashboard.
 
-This keeps the same previous dashboard layout:
-- Current Dashboard tab
-- Ticket Trend tab
+Updated from Job Card List 202606231302.xlsx.
 
-Upload all files to GitHub and redeploy on Render.
+Change applied:
+Tickets Stuck > 3 Days excludes any status containing:
+Quote Sent Awaiting Customer Approval
 
-Render settings:
-Environment: Python
-Build Command: pip install -r requirements.txt
-Start Command: gunicorn app:app
+Upload these files to GitHub and redeploy on Render.
