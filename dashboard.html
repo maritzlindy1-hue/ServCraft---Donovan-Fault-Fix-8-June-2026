@@ -47,14 +47,14 @@ function showTab(id){
 
 <div id="current" class="tab active">
 <div class="cards">
-<div class="card"><div class="label">Current Active Tickets</div><div class="num">49</div></div>
-<div class="card"><div class="label">Tickets Stuck &gt;3 Days</div><div class="num red">6</div></div>
-<div class="card"><div class="label">Average Days In Status</div><div class="num">3.6</div></div>
+<div class="card"><div class="label">Current Active Tickets</div><div class="num">48</div></div>
+<div class="card"><div class="label">Tickets Stuck &gt;3 Days</div><div class="num red">5</div></div>
+<div class="card"><div class="label">Average Days In Status</div><div class="num">3.0</div></div>
 </div>
 
 <div class="note">
 <b>Stuck KPI and Average Days exclude:</b>
-Quote Sent Awaiting Customer Approval, JC Stalled, Job Approved Send Stock, and Quote Population / Quote Populated statuses.
+Closed jobs, Quote Sent Awaiting Customer Approval, JC Stalled, Job Approved Send Stock, and Quote Population / Quote Populated statuses.
 </div>
 
 <h2>Current Summary</h2>
@@ -69,14 +69,12 @@ Quote Sent Awaiting Customer Approval, JC Stalled, Job Approved Send Stock, and 
 <tr><td>SI08_FT_Quote Approved by Customer Send Invoice (LT Reserve stock)</td><td>1</td></tr>
 <tr><td>IN20_FT_JC Stalled (Check Comments)</td><td>1</td></tr>
 <tr><td>FF04.1_FT_Quote population</td><td>1</td></tr>
-<tr><td>FF16_CLOSE Job</td><td>1</td></tr>
 <tr><td>FF02.2_PT_Waiting for Kamstrup Meter Comms</td><td>1</td></tr>
 <tr><td>SI07_FT_Quote Sent Awaiting Customer Approval</td><td>1</td></tr>
 <tr><td>FF05_FT_Quote Amend/Send</td><td>1</td></tr></tbody></table>
 
 <h2>Stuck Tickets &gt;3 Days</h2>
-<table><thead><tr><th>Job Number</th><th>Status</th><th>Days In Status</th><th>Customer</th></tr></thead><tbody><tr><td>JC10961</td><td>FF16_CLOSE Job</td><td>18</td><td>The Circle (Pty) Ltd</td></tr>
-<tr><td>JC10848</td><td>FF12.1_PT_Install complete capture info</td><td>15</td><td>Seven Seasons 214 (Pty) Ltd</td></tr>
+<table><thead><tr><th>Job Number</th><th>Status</th><th>Days In Status</th><th>Customer</th></tr></thead><tbody><tr><td>JC10848</td><td>FF12.1_PT_Install complete capture info</td><td>15</td><td>Seven Seasons 214 (Pty) Ltd</td></tr>
 <tr><td>JC10916</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>15</td><td>The Equity Property Partnership</td></tr>
 <tr><td>JC10992</td><td>FF03.1_PT_1st Call made to Client</td><td>9</td><td>Icala Properties (Pty) Ltd</td></tr>
 <tr><td>JC10952</td><td>FF10B_PT_Schedule REM Tech installation/commission</td><td>8</td><td>Makana Fast Food</td></tr>
@@ -106,7 +104,6 @@ Tenant: ACM</td></tr>
 <tr class='excluded-kpi'><td>JC10958</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>8</td><td>Donovan Willemse</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>28500299 not calling in, billing due the 5th.</td></tr>
 <tr class='excluded-kpi'><td>JC10959</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td><td>Donovan Willemse, Zoë Wille</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>C-SAE5182 not calling in visio 0203443E</td></tr>
 <tr class='excluded-kpi'><td>JC10960</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td><td>Donovan Willemse, Zoë Wille</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>C-SAE5181 not calling in, visio 02033D62. billing due the 5th</td></tr>
-<tr class=''><td>JC10961</td><td>FF16_CLOSE Job</td><td>18</td><td>Donovan Willemse</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>28500291 not calling in. Billing due the 5th. This unit is vacant so could be off due to that?</td></tr>
 <tr class='excluded-kpi'><td>JC10963</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td><td>Donovan Willemse, Zoë Wille</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>C-SAE5176 not calling in, 028EB1DD visio. Billing due 5th</td></tr>
 <tr class='excluded-kpi'><td>JC10964</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td><td>Donovan Willemse, Zoë Wille</td><td>The Circle (Pty) Ltd</td><td>Kings Mall, Main Road, East London, 5201, (Lize Price - 0609611007)</td><td>028EB998, M3-C-HAA4618 not calling in. Billing due the 5th</td></tr>
 <tr class='excluded-kpi'><td>JC10965</td><td>FF06_PT_Quote Sent Awaiting Customer Approval</td><td>2</td><td>Donovan Willemse, Zoë Wille</td><td>Naledi Mall (Pty) Ltd</td><td>Dolphins Leap 35 Humewood Rd Humewood Gqeberha (Alexander van Zyl)</td><td>220902279 not calling in, visio 00C57D16. Billing due 5th</td></tr>
@@ -145,9 +142,9 @@ Please resolve comms</td></tr>
 <h2>Ticket Movement Overview</h2>
 <div class="cards">
 <div class="card"><div class="label">Starting Ticket Count</div><div class="num">11</div></div>
-<div class="card"><div class="label">Current Ticket Count</div><div class="num">49</div></div>
+<div class="card"><div class="label">Current Ticket Count</div><div class="num">48</div></div>
 <div class="card"><div class="label">Original Tickets Closed</div><div class="num green">7</div></div>
-<div class="card"><div class="label">New Tickets Added</div><div class="num red">45</div></div>
+<div class="card"><div class="label">New Tickets Added</div><div class="num red">44</div></div>
 </div>
 
 <h2>Explanation</h2>
@@ -155,9 +152,9 @@ Please resolve comms</td></tr>
 <thead><tr><th>Metric</th><th>Explanation</th></tr></thead>
 <tbody>
 <tr><td>Starting Count</td><td>Initial Donovan dashboard contained 11 active tickets.</td></tr>
-<tr><td>Current Count</td><td>Latest active Donovan ticket count from Job Card List 202606261109.xlsx.</td></tr>
-<tr><td>Closed Tickets</td><td>7 of the original 11 job cards no longer appear as active in the latest export.</td></tr>
-<tr><td>New Tickets Added</td><td>45 new active tickets were added after the first dashboard snapshot.</td></tr>
+<tr><td>Current Count</td><td>Latest open Donovan ticket count from Job Card List 202606261109.xlsx. Closed jobs are excluded.</td></tr>
+<tr><td>Closed Tickets</td><td>7 of the original 11 job cards no longer appear as open in the latest export.</td></tr>
+<tr><td>New Tickets Added</td><td>44 new open tickets were added after the first dashboard snapshot.</td></tr>
 </tbody>
 </table>
 
@@ -165,11 +162,11 @@ Please resolve comms</td></tr>
 <table>
 <thead><tr><th>Category</th><th>Count</th></tr></thead>
 <tbody>
-<tr><td>Total Tickets Handled During Period</td><td>56</td></tr>
+<tr><td>Total Tickets Handled During Period</td><td>55</td></tr>
 <tr><td>Still Active From Original Batch</td><td>4</td></tr>
 <tr><td>Original Tickets Closed</td><td>7</td></tr>
-<tr><td>New Tickets Added</td><td>45</td></tr>
-<tr><td>Current Active Total</td><td>49</td></tr>
+<tr><td>New Tickets Added</td><td>44</td></tr>
+<tr><td>Current Open Total</td><td>48</td></tr>
 </tbody>
 </table>
 
@@ -201,7 +198,6 @@ Please resolve comms</td></tr>
 <tr><td>JC10958</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>8</td></tr>
 <tr><td>JC10959</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td></tr>
 <tr><td>JC10960</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td></tr>
-<tr><td>JC10961</td><td>FF16_CLOSE Job</td><td>18</td></tr>
 <tr><td>JC10963</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td></tr>
 <tr><td>JC10964</td><td>FF17_FT_JC Stalled (Check Comments)</td><td>4</td></tr>
 <tr><td>JC10965</td><td>FF06_PT_Quote Sent Awaiting Customer Approval</td><td>2</td></tr>

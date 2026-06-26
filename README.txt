@@ -2,7 +2,8 @@ GitHub files for Donovan Ticket Dashboard.
 
 Updated from Job Card List 202606261109.xlsx.
 
-Stuck >3 Days KPI and Average Days In Status exclude:
+Closed jobs are excluded from the dashboard.
+Stuck >3 Days KPI and Average Days In Status also exclude:
 - Quote Sent Awaiting Customer Approval
 - JC Stalled
 - Job Approved Send Stock
