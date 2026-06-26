@@ -9,7 +9,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#f3f6fa;margin:0;padding:
 h1{color:#083b70;margin:0 0 14px;font-size:28px}
 h2{margin:22px 0 10px;font-size:22px;color:#111}
 .small{color:#555;margin-bottom:12px}
-.tabs{display:flex;gap:10px;margin-bottom:18px}
+.tabs{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
 .tabbtn{background:#063d72;color:#fff;border:0;border-radius:6px;padding:9px 14px;font-weight:700;cursor:pointer}
 .tabbtn:hover{opacity:.92}
 .tab{display:none}
@@ -27,7 +27,11 @@ td{border:1px solid #dcdfe5;padding:8px;vertical-align:top}
 tr:nth-child(even) td{background:#fbfbfb}
 .excluded-kpi td{background:#fffaf0}
 .note{background:#fff;border-left:5px solid #063d72;padding:12px;margin:12px 0;box-shadow:0 2px 8px #d7dde5}
-@media(max-width:760px){body{padding:14px}.card{min-width:150px}table{font-size:12px}}
+.calendar th{text-align:center}
+.calendar td{height:92px;width:14.28%;background:#fff}
+.calendar .date{font-weight:800;color:#083b70;margin-bottom:6px}
+.calendar .muted{opacity:.45}
+@media(max-width:760px){body{padding:14px}.card{min-width:150px}table{font-size:12px}.calendar td{height:auto;font-size:11px;padding:5px}}
 </style>
 <script>
 function showTab(id){
@@ -43,6 +47,7 @@ function showTab(id){
 <div class="tabs">
 <button class="tabbtn" onclick="showTab('current')">Current Dashboard</button>
 <button class="tabbtn" onclick="showTab('trend')">Ticket Trend</button>
+<button class="tabbtn" onclick="showTab('daily')">Daily Activity</button>
 </div>
 
 <div id="current" class="tab active">
@@ -230,5 +235,401 @@ Please resolve comms</td></tr>
 <tr><td>JC11058</td><td>FF02.1_PT_Troubleshoot Remotely</td><td>0</td></tr>
 </tbody></table>
 </div>
+
+<div id="daily" class="tab">
+<h2>Daily Activity</h2>
+<div class="cards">
+<div class="card"><div class="label">Tickets Created</div><div class="num">48</div></div>
+<div class="card"><div class="label">Tickets With Movement</div><div class="num">48</div></div>
+<div class="card"><div class="label">Days With Activity</div><div class="num">21</div></div>
+</div>
+
+<div class="note">
+Calendar uses <b>Created Date</b> for new tickets and <b>Modified Date</b> for movement/activity. Hover over a day to see job numbers.
+</div>
+
+<h2>Calendar View</h2>
+<table class="calendar">
+<thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
+<tbody><tr><td class="calday muted" title="Created:  | Movement: ">
+<div class="date">18 May</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created:  | Movement: ">
+<div class="date">19 May</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created:  | Movement: ">
+<div class="date">20 May</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created: JC10848 | Movement: ">
+<div class="date">21 May</div>
+<div>New: <b>1</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created: JC10852, JC10855 | Movement: ">
+<div class="date">22 May</div>
+<div>New: <b>2</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created:  | Movement: ">
+<div class="date">23 May</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created:  | Movement: ">
+<div class="date">24 May</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td></tr>
+<tr><td class="calday muted" title="Created: JC10858 | Movement: ">
+<div class="date">25 May</div>
+<div>New: <b>1</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created: JC10894 | Movement: ">
+<div class="date">26 May</div>
+<div>New: <b>1</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created:  | Movement: ">
+<div class="date">27 May</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created: JC10906 | Movement: ">
+<div class="date">28 May</div>
+<div>New: <b>1</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created:  | Movement: ">
+<div class="date">29 May</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created:  | Movement: ">
+<div class="date">30 May</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday muted" title="Created:  | Movement: ">
+<div class="date">31 May</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td></tr>
+<tr><td class="calday" title="Created: JC10911, JC10914 | Movement: ">
+<div class="date">01 Jun</div>
+<div>New: <b>2</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC10916, JC10917, JC10918 | Movement: ">
+<div class="date">02 Jun</div>
+<div>New: <b>3</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">03 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC10938 | Movement: ">
+<div class="date">04 Jun</div>
+<div>New: <b>1</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC10952, JC10954, JC10955, JC10958, JC10959, JC10960, JC10963, JC10964, JC10965, JC10966 | Movement: ">
+<div class="date">05 Jun</div>
+<div>New: <b>10</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">06 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">07 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td></tr>
+<tr><td class="calday" title="Created:  | Movement: ">
+<div class="date">08 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC10971, JC10972, JC10973, JC10974 | Movement: ">
+<div class="date">09 Jun</div>
+<div>New: <b>4</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: JC10848, JC10916">
+<div class="date">10 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>2</b></div>
+<div>Stuck: <b>2</b></div>
+</td><td class="calday" title="Created: JC10986, JC10988, JC10989, JC10990 | Movement: ">
+<div class="date">11 Jun</div>
+<div>New: <b>4</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC10992, JC10994, JC10997 | Movement: ">
+<div class="date">12 Jun</div>
+<div>New: <b>3</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">13 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">14 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td></tr>
+<tr><td class="calday" title="Created:  | Movement: ">
+<div class="date">15 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">16 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC11007, JC11008 | Movement: JC10906, JC10952, JC10954, JC10958, JC10992">
+<div class="date">17 Jun</div>
+<div>New: <b>2</b></div>
+<div>Moved: <b>5</b></div>
+<div>Stuck: <b>2</b></div>
+</td><td class="calday" title="Created: JC11011 | Movement: JC10894, JC10955, JC10973">
+<div class="date">18 Jun</div>
+<div>New: <b>1</b></div>
+<div>Moved: <b>3</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC11012 | Movement: JC10914, JC11012">
+<div class="date">19 Jun</div>
+<div>New: <b>1</b></div>
+<div>Moved: <b>2</b></div>
+<div>Stuck: <b>1</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">20 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">21 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td></tr>
+<tr><td class="calday" title="Created: JC11016 | Movement: JC10959, JC10960, JC10963, JC10964, JC10966, JC10986, JC10989, JC10997, JC11007, JC11016">
+<div class="date">22 Jun</div>
+<div>New: <b>1</b></div>
+<div>Moved: <b>10</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: JC10852, JC10855, JC10911, JC10918, JC10965, JC10974, JC10990, JC11008, JC11011">
+<div class="date">23 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>9</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC11021 | Movement: JC10917, JC10938, JC10971">
+<div class="date">24 Jun</div>
+<div>New: <b>1</b></div>
+<div>Moved: <b>3</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC11026, JC11029, JC11030 | Movement: JC10858, JC10972, JC10988, JC10994, JC11021, JC11029, JC11030">
+<div class="date">25 Jun</div>
+<div>New: <b>3</b></div>
+<div>Moved: <b>7</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created: JC11053, JC11054, JC11055, JC11056, JC11057, JC11058 | Movement: JC11026, JC11053, JC11054, JC11055, JC11056, JC11057, JC11058">
+<div class="date">26 Jun</div>
+<div>New: <b>6</b></div>
+<div>Moved: <b>7</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">27 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td><td class="calday" title="Created:  | Movement: ">
+<div class="date">28 Jun</div>
+<div>New: <b>0</b></div>
+<div>Moved: <b>0</b></div>
+<div>Stuck: <b>0</b></div>
+</td></tr>
+</tbody>
+</table>
+
+<h2>Top Movement Days</h2>
+<table><thead><tr><th>Date</th><th>Tickets With Movement</th></tr></thead><tbody><tr><td>2026-06-22</td><td>10</td></tr>
+<tr><td>2026-06-23</td><td>9</td></tr>
+<tr><td>2026-06-25</td><td>7</td></tr>
+<tr><td>2026-06-26</td><td>7</td></tr>
+<tr><td>2026-06-17</td><td>5</td></tr></tbody></table>
+
+<h2>Daily Activity Table</h2>
+<table>
+<thead><tr><th>Date</th><th>Created</th><th>Movement</th><th>Stuck Count</th><th>Created Job Numbers</th><th>Moved Job Numbers</th></tr></thead>
+<tbody><tr>
+<td>2026-06-26</td>
+<td>6</td>
+<td>7</td>
+<td>0</td>
+<td>JC11053, JC11054, JC11055, JC11056, JC11057, JC11058</td>
+<td>JC11026, JC11053, JC11054, JC11055, JC11056, JC11057, JC11058</td>
+</tr><tr>
+<td>2026-06-25</td>
+<td>3</td>
+<td>7</td>
+<td>0</td>
+<td>JC11026, JC11029, JC11030</td>
+<td>JC10858, JC10972, JC10988, JC10994, JC11021, JC11029, JC11030</td>
+</tr><tr>
+<td>2026-06-24</td>
+<td>1</td>
+<td>3</td>
+<td>0</td>
+<td>JC11021</td>
+<td>JC10917, JC10938, JC10971</td>
+</tr><tr>
+<td>2026-06-23</td>
+<td>0</td>
+<td>9</td>
+<td>0</td>
+<td></td>
+<td>JC10852, JC10855, JC10911, JC10918, JC10965, JC10974, JC10990, JC11008, JC11011</td>
+</tr><tr>
+<td>2026-06-22</td>
+<td>1</td>
+<td>10</td>
+<td>0</td>
+<td>JC11016</td>
+<td>JC10959, JC10960, JC10963, JC10964, JC10966, JC10986, JC10989, JC10997, JC11007, JC11016</td>
+</tr><tr>
+<td>2026-06-19</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>JC11012</td>
+<td>JC10914, JC11012</td>
+</tr><tr>
+<td>2026-06-18</td>
+<td>1</td>
+<td>3</td>
+<td>0</td>
+<td>JC11011</td>
+<td>JC10894, JC10955, JC10973</td>
+</tr><tr>
+<td>2026-06-17</td>
+<td>2</td>
+<td>5</td>
+<td>2</td>
+<td>JC11007, JC11008</td>
+<td>JC10906, JC10952, JC10954, JC10958, JC10992</td>
+</tr><tr>
+<td>2026-06-12</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>JC10992, JC10994, JC10997</td>
+<td></td>
+</tr><tr>
+<td>2026-06-11</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>JC10986, JC10988, JC10989, JC10990</td>
+<td></td>
+</tr><tr>
+<td>2026-06-10</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td></td>
+<td>JC10848, JC10916</td>
+</tr><tr>
+<td>2026-06-09</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>JC10971, JC10972, JC10973, JC10974</td>
+<td></td>
+</tr><tr>
+<td>2026-06-05</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>JC10952, JC10954, JC10955, JC10958, JC10959, JC10960, JC10963, JC10964, JC10965, JC10966</td>
+<td></td>
+</tr><tr>
+<td>2026-06-04</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>JC10938</td>
+<td></td>
+</tr><tr>
+<td>2026-06-02</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>JC10916, JC10917, JC10918</td>
+<td></td>
+</tr><tr>
+<td>2026-06-01</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>JC10911, JC10914</td>
+<td></td>
+</tr><tr>
+<td>2026-05-28</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>JC10906</td>
+<td></td>
+</tr><tr>
+<td>2026-05-26</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>JC10894</td>
+<td></td>
+</tr><tr>
+<td>2026-05-25</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>JC10858</td>
+<td></td>
+</tr><tr>
+<td>2026-05-22</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>JC10852, JC10855</td>
+<td></td>
+</tr><tr>
+<td>2026-05-21</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>JC10848</td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+
 </body>
 </html>
