@@ -1,9 +1,10 @@
 GitHub files for Donovan Ticket Dashboard.
 
-Updated from Job Card List 202606231302.xlsx.
+Updated from Job Card List 202606261109.xlsx.
+Same old dashboard layout:
+- Current Dashboard tab
+- Ticket Trend tab
+- Cards, tables, trend summary
+- Stuck KPI excludes Quote Sent Awaiting Customer Approval statuses.
 
-Change applied:
-Tickets Stuck > 3 Days excludes any status containing:
-Quote Sent Awaiting Customer Approval
-
-Upload these files to GitHub and redeploy on Render.
+Upload all files to GitHub and redeploy on Render.
