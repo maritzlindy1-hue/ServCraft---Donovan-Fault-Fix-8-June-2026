@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: donovan-ticket-dashboard
+    name: donovan-kpi-dashboard-v2
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
