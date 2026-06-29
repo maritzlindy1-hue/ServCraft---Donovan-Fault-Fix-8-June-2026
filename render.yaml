@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: donovan-kpi-dashboard-v2
+    name: donovan-kpi-dashboard-v3-sites
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
