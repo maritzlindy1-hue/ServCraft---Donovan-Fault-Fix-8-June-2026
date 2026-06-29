@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: donovan-kpi-dashboard-v5-stalled
+    name: donovan-kpi-dashboard-v6-calendar-explained
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
